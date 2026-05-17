@@ -31,9 +31,7 @@ jobs:
         run: npm ci
 
       - name: Build for GitHub Pages
-        run: npm run build
-        env:
-          VITE_BASE_PATH: /DealerProject/
+        run: npm run build:pages
 
       - name: SPA fallback for client-side routing
         run: cp dist/index.html dist/404.html

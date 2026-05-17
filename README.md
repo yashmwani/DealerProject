@@ -35,13 +35,26 @@ Open [http://localhost:5173](http://localhost:5173) in your browser.
 
 **https://yashmwani.github.io/DealerProject/**
 
-Pushes to `main` deploy automatically via GitHub Actions. Enable Pages once in your repo:
+#### Republish after unpublishing
 
-1. Open [DealerProject → Settings → Pages](https://github.com/yashmwani/DealerProject/settings/pages)
-2. Under **Build and deployment**, set **Source** to **GitHub Actions** (not “Deploy from a branch”)
-3. If you previously used branch deploy, switch to Actions and re-run the **Deploy to GitHub Pages** workflow under the **Actions** tab
+1. Open [Settings → Pages](https://github.com/yashmwani/DealerProject/settings/pages)
+2. Under **Build and deployment**, set **Source** to **GitHub Actions** (never “Deploy from a branch” / root)
+3. Remove any broken **custom domain** until DNS is configured (optional)
+4. Open [Actions](https://github.com/yashmwani/DealerProject/actions) → **Deploy to GitHub Pages** → **Run workflow** → `main`
+5. Wait for **build** + **deploy** to finish (green), then open the live URL (hard refresh: Ctrl+Shift+R)
 
-**Blank page?** GitHub is probably serving the dev `index.html` (with `/src/main.tsx`) instead of the built app. Fix: set Source to **GitHub Actions** only, then run the deploy workflow again.
+Pushes to `main` also deploy automatically when Pages is enabled.
+
+**Blank page?** The site is serving dev `index.html` (`/src/main.tsx`) instead of the built app. Use **GitHub Actions** as the source and run the deploy workflow again.
+
+Test the production build locally:
+
+```bash
+npm run build:pages
+npm run preview:pages
+```
+
+Then open the URL shown in the terminal (includes `/DealerProject/`).
 
 ### Build for production
 
