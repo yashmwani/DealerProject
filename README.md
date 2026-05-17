@@ -31,6 +31,15 @@ npm run dev
 
 Open [http://localhost:5173](http://localhost:5173) in your browser.
 
+### Live site (GitHub Pages)
+
+**https://yashmwani.github.io/DealerProject/**
+
+Pushes to `main` deploy automatically via GitHub Actions. Enable Pages once in your repo:
+
+1. Open [DealerProject → Settings → Pages](https://github.com/yashmwani/DealerProject/settings/pages)
+2. Under **Build and deployment**, set **Source** to **GitHub Actions**
+
 ### Build for production
 
 ```bash
