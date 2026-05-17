@@ -38,7 +38,10 @@ Open [http://localhost:5173](http://localhost:5173) in your browser.
 Pushes to `main` deploy automatically via GitHub Actions. Enable Pages once in your repo:
 
 1. Open [DealerProject → Settings → Pages](https://github.com/yashmwani/DealerProject/settings/pages)
-2. Under **Build and deployment**, set **Source** to **GitHub Actions**
+2. Under **Build and deployment**, set **Source** to **GitHub Actions** (not “Deploy from a branch”)
+3. If you previously used branch deploy, switch to Actions and re-run the **Deploy to GitHub Pages** workflow under the **Actions** tab
+
+**Blank page?** GitHub is probably serving the dev `index.html` (with `/src/main.tsx`) instead of the built app. Fix: set Source to **GitHub Actions** only, then run the deploy workflow again.
 
 ### Build for production
 
